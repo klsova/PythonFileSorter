@@ -3,12 +3,11 @@ import os
 import shutil
 
 
-#path to downloads C:\Users\dange\Downloads
-path = 'C:\Users\dange\Downloads'
+path = 'C:\\Users\dange\Downloads'
 
-list_ = os.listdir(path) #list of files in downloads
+list_ = os.listdir(path)
 
-for file_ in list:
+for file_ in list_:
     name, ext = os.path.splitext(file_)
     ext = ext[1:]
     if ext == '':
@@ -18,3 +17,4 @@ for file_ in list:
     else:
         os.makedirs(path+'/'+ext)
         shutil.move(path+'/'+file_, path+'/'+ext+'/'+file_)
+
